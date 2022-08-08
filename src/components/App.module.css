@@ -1,0 +1,30 @@
+.mainContainer {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 1px solid black;
+  position: relative;
+  min-height: 1000px;
+}
+
+.playersContainer {
+  margin-top: 30px;
+}
+
+.mainText {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+  background: linear-gradient(90.16deg, #094668 0%, #0b72ab 100%);
+  font-family: 'Secular One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 93px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+}

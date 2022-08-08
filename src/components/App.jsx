@@ -1,16 +1,16 @@
-export const App = () => {
+import Match from './Match/Match';
+import Footer from './Footer/Footer';
+import s from './App.module.css';
+
+export function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      React homework template
+    <div>
+      <div className={s.mainContainer}>
+        <h1 className={s.mainText}>Retards league</h1>
+        <div className={s.playersContainer}>WELCOME TO THE RETARDS LEAGUE</div>
+        <Match />
+        <Footer />
+      </div>
     </div>
   );
-};
+}
