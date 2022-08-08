@@ -19,7 +19,7 @@ function Match() {
     if (users.nameOne === users.nameTwo) {
       alert('Ти помилився з іменами, братішка');
     }
-    players.map(player => {
+    const a = players.map(player => {
       if (player.name === users.nameOne) {
         player.games += 1;
         player.goalsScored += Number(users.goalsOne);
@@ -36,8 +36,9 @@ function Match() {
           player.wins += 1;
         } else player.loses += 1;
       }
-      return;
+      return player;
     });
+    console.log(a);
 
     setUsers({ nameOne: '', goalsOne: '', nameTwo: '', goalsTwo: '' });
   };
