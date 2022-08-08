@@ -20,7 +20,7 @@ function Match() {
       alert('Ти помилився з іменами, братішка');
     }
     players.map(player => {
-      if (player.name == users.nameOne) {
+      if (player.name === users.nameOne) {
         player.games += 1;
         player.goalsScored += Number(users.goalsOne);
         player.goalsMissed += Number(users.goalsTwo);
@@ -28,7 +28,7 @@ function Match() {
           player.wins += 1;
         } else player.loses += 1;
       }
-      if (player.name == users.nameTwo) {
+      if (player.name === users.nameTwo) {
         player.games += 1;
         player.goalsScored += Number(users.goalsTwo);
         player.goalsMissed += Number(users.goalsOne);
