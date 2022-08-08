@@ -21,7 +21,7 @@ export default function Table({
         <td className={s.table && s.tableItem}>{goalsScored}</td>
         <td className={s.table && s.tableItem}>{goalsMissed}</td>
         <td className={s.table && s.tableItem}>
-          {games == 0 ? 0 : goalsPerGame}
+          {games === 0 ? 0 : goalsPerGame}
         </td>
       </tr>
     </>
