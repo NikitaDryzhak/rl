@@ -45,103 +45,106 @@ function Match() {
 
   return (
     <div>
-      <form className={s.form} autoComplete="off" onSubmit={btnSubmit}>
-        <label className={s.label}>
-          {' '}
-          <div className={s.result}>
+      <div className={s.mainPage}>
+        <h1 className={s.welcomeText}>WELCOME TO THE RETARDS LEAGUE</h1>
+        <h2 className={s.infoText}>PLEASE INSERT LAST GAME SCORE</h2>
+        <form className={s.form} autoComplete="off" onSubmit={btnSubmit}>
+          <label className={s.label}>
             {' '}
-            <select
-              className={s.input}
-              onChange={handleChangeOne}
-              name="nameOne"
-              value={users.nameOne}
-            >
-              <option value="" disabled>
-                PLAYER 1
-              </option>
-              <option value="BODYAO">BODYAO</option>
-              <option value="IVANYAO">IVANYAO</option>
-              <option value="EUGENYAO">EUGENYAO</option>
-              <option value="MIKHYAO">MIKHYAO</option>
-              <option value="TARASYAO">TARASYAO</option>
-              <option value="NIKITYAO">NIKITYAO</option>
-            </select>
-            Goals
-            <input
-              onChange={handleChangeOne}
-              className={s.input}
-              type="number"
-              name="goalsOne"
-              required
-              placeholder="0"
-              min="0"
-              value={users.goalsOne}
-            />
-          </div>
-          <div className={s.result}>
-            {' '}
-            <select
-              className={s.input}
-              onChange={handleChangeOne}
-              name="nameTwo"
-              value={users.nameTwo}
-            >
+            <div className={s.result}>
               {' '}
-              <option value="" disabled>
-                PLAYER 2
-              </option>
-              <option value="MIKHYAO">MIKHYAO</option>
-              <option value="IVANYAO">IVANYAO</option>
-              <option value="BODYAO">BODYAO</option>
-              <option value="EUGENYAO">EUGENYAO</option>
-              <option value="TARASYAO">TARASYAO</option>
-              <option value="NIKITYAO">NIKITYAO</option>
-            </select>
-            Goals
-            <input
-              onChange={handleChangeOne}
-              className={s.input}
-              type="number"
-              name="goalsTwo"
-              required
-              placeholder="0"
-              min="0"
-              value={users.goalsTwo}
-            />
-          </div>
-        </label>
-        <button className={s.btnSubmit} type="submit">
-          Add to table
-        </button>
-      </form>
-      <div>
-        <table className={s.list}>
-          <tbody>
-            <tr>
-              <th>Name</th>
-              <th>Games</th>
-              <th>Win</th>
-              <th>Lose</th>
-              <th>GF</th>
-              <th>GA</th>
-              <th>GPG</th>
-            </tr>
-            {players.map(
-              ({ id, name, games, wins, loses, goalsScored, goalsMissed }) => (
-                <Table
-                  key={id}
-                  name={name}
-                  games={games}
-                  wins={wins}
-                  loses={loses}
-                  goalsScored={goalsScored}
-                  goalsMissed={goalsMissed}
-                />
-              )
-            )}
-          </tbody>
-        </table>
+              <select
+                className={s.inputSelect}
+                onChange={handleChangeOne}
+                name="nameOne"
+                value={users.nameOne}
+              >
+                <option value="" disabled>
+                  ADD PLAYER 1
+                </option>
+                <option value="BODYAO">BODYAO</option>
+                <option value="IVANYAO">IVANYAO</option>
+                <option value="EUGENYAO">EUGENYAO</option>
+                <option value="MIKHYAO">MIKHYAO</option>
+                <option value="TARASYAO">TARASYAO</option>
+                <option value="NIKITYAO">NIKITYAO</option>
+              </select>
+              <input
+                onChange={handleChangeOne}
+                className={s.input}
+                type="number"
+                name="goalsOne"
+                required
+                placeholder="ADD GOALS NUMBER"
+                min="0"
+                value={users.goalsOne}
+              />
+            </div>
+            <div className={s.result}>
+              {' '}
+              <select
+                className={s.inputSelect}
+                onChange={handleChangeOne}
+                name="nameTwo"
+                value={users.nameTwo}
+              >
+                {' '}
+                <option value="" disabled>
+                  ADD PLAYER 2
+                </option>
+                <option value="MIKHYAO">MIKHYAO</option>
+                <option value="IVANYAO">IVANYAO</option>
+                <option value="BODYAO">BODYAO</option>
+                <option value="EUGENYAO">EUGENYAO</option>
+                <option value="TARASYAO">TARASYAO</option>
+                <option value="NIKITYAO">NIKITYAO</option>
+              </select>
+              <input
+                onChange={handleChangeOne}
+                className={s.input}
+                type="number"
+                name="goalsTwo"
+                required
+                placeholder="ADD GOALS NUMBER"
+                min="0"
+                value={users.goalsTwo}
+              />
+            </div>
+          </label>
+          <button className={s.btnSubmit} type="submit">
+            Add to table
+          </button>
+        </form>
+
+        <h1 className={s.overTableText}>FIRST CHAMPIONSHIP EVER</h1>
       </div>
+
+      <table className={s.list}>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <th>Games</th>
+            <th>Win</th>
+            <th>Lose</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>GPG</th>
+          </tr>
+          {players.map(
+            ({ id, name, games, wins, loses, goalsScored, goalsMissed }) => (
+              <Table
+                key={id}
+                name={name}
+                games={games}
+                wins={wins}
+                loses={loses}
+                goalsScored={goalsScored}
+                goalsMissed={goalsMissed}
+              />
+            )
+          )}
+        </tbody>
+      </table>
     </div>
   );
 }
