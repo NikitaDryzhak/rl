@@ -16,7 +16,7 @@ function Match() {
   const btnSubmit = event => {
     event.preventDefault();
 
-    if (users.nameOne == users.nameTwo) {
+    if (users.nameOne === users.nameTwo) {
       alert('Ти помилився з іменами, братішка');
     }
     players.map(player => {
@@ -36,6 +36,7 @@ function Match() {
           player.wins += 1;
         } else player.loses += 1;
       }
+      return;
     });
 
     setUsers({ nameOne: '', goalsOne: '', nameTwo: '', goalsTwo: '' });
