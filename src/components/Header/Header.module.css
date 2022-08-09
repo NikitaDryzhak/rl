@@ -1,14 +1,39 @@
+.header {
+  position: relative;
+  height: 65px;
+  width: 100%;
+  background: linear-gradient(90.16deg, #094668 0%, #0b72ab 100%);
+}
+
 .headerText {
   margin: 0;
-  background: linear-gradient(90.16deg, #094668 0%, #0b72ab 100%);
-  font-family: 'Secular One';
-  font-style: normal;
+  padding-top: 15px;
+
   font-weight: 500;
   font-size: 32px;
-  line-height: 60px;
   text-transform: uppercase;
 
   color: #ffffff;
-
   text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+}
+
+.warsaw {
+  content: url('../../../images/warsaw-header.svg');
+  width: 56px;
+  position: absolute;
+  left: 20%;
+  bottom: 5%;
+  padding: 0;
+  margin: 0;
+}
+
+.sticks {
+  padding: 0;
+  margin: 0;
+  content: url('../../../images/sticks-header.png');
+  width: 90px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  right: 20%;
 }

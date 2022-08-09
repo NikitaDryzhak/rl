@@ -1,4 +1,5 @@
 import s from './Table.module.css';
+import players from '../players';
 
 export default function Table({
   id,
@@ -8,19 +9,35 @@ export default function Table({
   loses,
   goalsScored,
   goalsMissed,
+  goalsPerGame,
 }) {
-  const goalsPerGame = (goalsScored / games).toFixed(2);
-
+  console.log(players[0].name);
   return (
     <>
       <tr key={id}>
-        <td className={s.table && s.name}>{name}</td>
-        <td className={s.table && s.tableItem}>{games}</td>
-        <td className={s.table && s.tableItem}>{wins}</td>
-        <td className={s.table && s.tableItem}>{loses}</td>
-        <td className={s.table && s.tableItem}>{goalsScored}</td>
-        <td className={s.table && s.tableItem}>{goalsMissed}</td>
-        <td className={s.table && s.tableItem}>
+        <td
+          className={
+            name !== players[0].name ? s.tableItemName : s.firstItemName
+          }
+        >
+          {name}
+        </td>
+        <td className={name !== players[0].name ? s.tableItem : s.firstItem}>
+          {games}
+        </td>
+        <td className={name !== players[0].name ? s.tableItem : s.firstItem}>
+          {wins}
+        </td>
+        <td className={name !== players[0].name ? s.tableItem : s.firstItem}>
+          {loses}
+        </td>
+        <td className={name !== players[0].name ? s.tableItem : s.firstItem}>
+          {goalsScored}
+        </td>
+        <td className={name !== players[0].name ? s.tableItem : s.firstItem}>
+          {goalsMissed}
+        </td>
+        <td className={name !== players[0].name ? s.tableItem : s.firstItem}>
           {games === 0 ? 0 : goalsPerGame}
         </td>
       </tr>

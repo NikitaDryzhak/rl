@@ -13,6 +13,8 @@ function Match() {
     setUsers({ ...users, [e.currentTarget.name]: e.currentTarget.value });
   };
 
+  players.sort((a, b) => b.goalsScored / b.games - a.goalsScored / a.games);
+
   const btnSubmit = event => {
     event.preventDefault();
 
@@ -48,6 +50,7 @@ function Match() {
       <div className={s.mainPage}>
         <h1 className={s.welcomeText}>WELCOME TO THE RETARDS LEAGUE</h1>
         <h2 className={s.infoText}>PLEASE INSERT LAST GAME SCORE</h2>
+
         <form className={s.form} autoComplete="off" onSubmit={btnSubmit}>
           <label className={s.label}>
             {' '}
@@ -112,38 +115,45 @@ function Match() {
             </div>
           </label>
           <button className={s.btnSubmit} type="submit">
-            Add to table
+            CONFIRM GAME
           </button>
         </form>
-
-        <h1 className={s.overTableText}>FIRST CHAMPIONSHIP EVER</h1>
+        <div className={s.mainTextContainer}>
+          <h1 className={s.overTableText}>FIRST CHAMPIONSHIP EVER</h1>
+          <img className={s.afterTextImg} />
+        </div>
       </div>
 
       <table className={s.list}>
         <tbody>
           <tr>
-            <th>Name</th>
-            <th>Games</th>
-            <th>Win</th>
-            <th>Lose</th>
-            <th>GF</th>
-            <th>GA</th>
-            <th>GPG</th>
+            <th className={s.topTableItem}>Name</th>
+            <th className={s.topTableItem}>Games</th>
+            <th className={s.topTableItem}>Win</th>
+            <th className={s.topTableItem}>Lose</th>
+            <th className={s.topTableItem}>GF</th>
+            <th className={s.topTableItem}>GA</th>
+            <th className={s.topTableItem}>GPG</th>
           </tr>
           {players.map(
-            ({ id, name, games, wins, loses, goalsScored, goalsMissed }) => (
-              <Table
-                key={id}
-                name={name}
-                games={games}
-                wins={wins}
-                loses={loses}
-                goalsScored={goalsScored}
-                goalsMissed={goalsMissed}
-              />
-            )
+            ({ id, name, games, wins, loses, goalsScored, goalsMissed }) => {
+              const goalsPerGame = (goalsScored / games).toFixed(2);
+              return (
+                <Table
+                  key={id}
+                  name={name}
+                  games={games}
+                  wins={wins}
+                  loses={loses}
+                  goalsScored={goalsScored}
+                  goalsMissed={goalsMissed}
+                  goalsPerGame={goalsPerGame}
+                />
+              );
+            }
           )}
         </tbody>
+        <p className={s.warsaw}></p>
       </table>
     </div>
   );

@@ -4,14 +4,12 @@
   margin-right: auto;
   text-align: center;
   border: 1px solid black;
-  position: relative;
   min-height: 1000px;
 }
 
 .welcomeText {
   margin-top: 30px;
-  font-family: 'Secular One';
-  font-style: normal;
+
   font-weight: 400;
   font-size: 30px;
   line-height: 58px;
