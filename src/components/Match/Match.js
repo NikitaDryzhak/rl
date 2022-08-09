@@ -120,7 +120,7 @@ function Match() {
         </form>
         <div className={s.mainTextContainer}>
           <h1 className={s.overTableText}>FIRST CHAMPIONSHIP EVER</h1>
-          <img className={s.afterTextImg} />
+          <img className={s.afterTextImg} alt="sticks" />
         </div>
       </div>
 
