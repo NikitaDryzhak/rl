@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/rl/static/css/main.51750eb6.css",
-    "main.js": "/rl/static/js/main.6e4654d1.js",
-    "static/media/background-main.png": "/rl/static/media/background-main.80e3732ceec5f9de7506.png",
+    "main.css": "/rl/static/css/main.32daeb6c.css",
+    "main.js": "/rl/static/js/main.5223f3f7.js",
+    "static/media/background.png": "/rl/static/media/background.2f18081f2d39226c2263.png",
+    "static/media/warsaw-header.svg": "/rl/static/media/warsaw-header.66994bd0646fc7a292a5.svg",
+    "static/media/warsaw-main.png": "/rl/static/media/warsaw-main.3abeb9b16b0022a5f7fb.png",
+    "static/media/sticks-header.png": "/rl/static/media/sticks-header.610681e3fb3d62e4fdeb.png",
+    "static/media/sticks-bottom.png": "/rl/static/media/sticks-bottom.18767e8cf6920c42c07c.png",
+    "static/media/Vector.svg": "/rl/static/media/Vector.d373c48442e9515aaf1a.svg",
     "index.html": "/rl/index.html",
-    "main.51750eb6.css.map": "/rl/static/css/main.51750eb6.css.map",
-    "main.6e4654d1.js.map": "/rl/static/js/main.6e4654d1.js.map"
+    "main.32daeb6c.css.map": "/rl/static/css/main.32daeb6c.css.map",
+    "main.5223f3f7.js.map": "/rl/static/js/main.5223f3f7.js.map"
   },
   "entrypoints": [
-    "static/css/main.51750eb6.css",
-    "static/js/main.6e4654d1.js"
+    "static/css/main.32daeb6c.css",
+    "static/js/main.5223f3f7.js"
   ]
 }
