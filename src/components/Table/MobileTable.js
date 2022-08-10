@@ -1,5 +1,6 @@
 import s from './MobileTable.module.css';
 import players from '../players';
+import PropTypes from 'prop-types';
 
 export default function MobileTable({
   id,
@@ -36,3 +37,12 @@ export default function MobileTable({
     </li>
   );
 }
+
+MobileTable.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  games: PropTypes.number.isRequired,
+  wins: PropTypes.number.isRequired,
+  loses: PropTypes.number.isRequired,
+  goalsPerGame: PropTypes.number.isRequired,
+};

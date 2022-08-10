@@ -1,5 +1,6 @@
 import s from './Table.module.css';
 import players from '../players';
+import PropTypes from 'prop-types';
 
 export default function Table({
   id,
@@ -43,3 +44,14 @@ export default function Table({
     </>
   );
 }
+
+Table.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  games: PropTypes.number.isRequired,
+  wins: PropTypes.number.isRequired,
+  loses: PropTypes.number.isRequired,
+  goalsScored: PropTypes.number.isRequired,
+  goalsMissed: PropTypes.number.isRequired,
+  goalsPerGame: PropTypes.number.isRequired,
+};
