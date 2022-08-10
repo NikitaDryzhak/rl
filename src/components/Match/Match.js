@@ -177,7 +177,7 @@ function Match() {
             )}
           </tbody>
         </table>{' '}
-        <img className={s.warsaw} />
+        <img className={s.warsaw} alt="warsaw" />
       </div>
       <div className={s.mobileTable}>
         <ul className={s.mobileList}>
