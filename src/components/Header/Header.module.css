@@ -1,8 +1,17 @@
 .header {
-  position: relative;
-  height: 65px;
+  text-align: center;
+  height: 70px;
   width: 100%;
   background: linear-gradient(90.16deg, #094668 0%, #0b72ab 100%);
+}
+.headerContent {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0;
 }
 
 .headerText {
@@ -19,10 +28,10 @@
 
 .warsaw {
   content: url('../../../images/warsaw-header.svg');
-  width: 56px;
+  width: 60px;
   position: absolute;
-  left: 20%;
-  bottom: 5%;
+  left: 0;
+
   padding: 0;
   margin: 0;
 }
@@ -31,9 +40,52 @@
   padding: 0;
   margin: 0;
   content: url('../../../images/sticks-header.png');
-  width: 90px;
-  height: 60px;
+  width: 100px;
+  height: 70px;
   position: absolute;
-  bottom: 0;
-  right: 20%;
+  top: 1px;
+  right: 0;
+}
+
+@media screen and (max-width: 580px) {
+  .header {
+    height: 40px;
+  }
+
+  .headerContent {
+    width: 400px;
+  }
+
+  .headerText {
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .warsaw {
+    width: 35px;
+    top: 0;
+  }
+
+  .sticks {
+    width: 60px;
+    height: 40px;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 580px) and (max-width: 768px) {
+  .header {
+    height: 60px;
+  }
+  .headerContent {
+    width: 540px;
+  }
+  .sticks {
+    width: 90px;
+    height: 60px;
+  }
+  .warsaw {
+    width: 48px;
+  }
 }

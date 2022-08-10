@@ -1,23 +1,13 @@
 .mainContainer {
-  width: 1600px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   border: 1px solid black;
-  min-height: 1000px;
+  height: 100%;
 }
 
-.welcomeText {
-  margin-top: 30px;
-
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 58px;
-  text-transform: uppercase;
-
-  color: #000000;
-}
-
-.infoText {
-  margin: 0;
+@media screen and (max-width: 480px) {
+  .mainContainer {
+    width: 480px;
+  }
 }

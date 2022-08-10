@@ -9,9 +9,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Secular One';
   font-style: normal;
+  line-height: 1;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }

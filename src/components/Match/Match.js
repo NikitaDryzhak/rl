@@ -1,6 +1,7 @@
 import s from './Match.module.css';
 import players from '../players';
 import Table from '../Table/Table';
+import MobileTable from '../Table/MobileTable';
 import { useState } from 'react';
 function Match() {
   const [users, setUsers] = useState({
@@ -123,9 +124,8 @@ function Match() {
           <img className={s.afterTextImg} alt="sticks" />
         </div>
       </div>
-
       <table className={s.list}>
-        <tbody>
+        <tbody className={s.tableBody}>
           <tr>
             <th className={s.topTableItem}>Name</th>
             <th className={s.topTableItem}>Games</th>
@@ -155,6 +155,24 @@ function Match() {
         </tbody>
         <p className={s.warsaw}></p>
       </table>
+      <div className={s.mobileTable}>
+        <ul className={s.mobileList}>
+          {players.map(({ id, name, games, wins, loses, goalsScored }) => {
+            const goalsPerGame = (goalsScored / games).toFixed(2);
+            return (
+              <MobileTable
+                key={id}
+                name={name}
+                games={games}
+                wins={wins}
+                loses={loses}
+                goalsPerGame={goalsPerGame}
+              />
+            );
+          })}
+          <p className={s.warsawMobile}></p>
+        </ul>
+      </div>{' '}
     </div>
   );
 }

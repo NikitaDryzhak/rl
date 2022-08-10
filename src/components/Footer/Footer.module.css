@@ -1,40 +1,58 @@
 .footer {
   width: 100%;
-
   font-weight: 400;
   font-size: 10px;
   height: 70px;
-  margin-top: 80px;
-
   color: #70b3d9;
   background: linear-gradient(90.16deg, #094668 0%, #0b72ab 100%);
   box-shadow: 0px -8px 30px rgba(39, 11, 85, 0.46);
+}
 
+.footerContainer {
+  width: 760px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-  text-align: center;
 }
 
 .mainTextFooter {
   margin: 0;
-  position: absolute;
-  left: 40%;
-  bottom: 24px;
-}
-
-.secondTextFooter {
-  margin: 0;
-  position: absolute;
-  left: 70%;
-  bottom: 30px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
 }
 
 .sticks {
   content: url('../../../images/sticks-bottom.png');
   width: 90px;
-  height: 60px;
-  padding: 0;
-  margin: 0;
   position: absolute;
-  bottom: 0;
-  left: 20%;
+  left: 0;
+  top: 10px;
+}
+
+@media screen and (max-width: 580px) {
+  .footer {
+    height: 50px;
+  }
+  .footerContainer {
+    width: 400px;
+  }
+
+  .sticks {
+    width: 60px;
+  }
+
+  .mainTextFooter {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 580px) and (max-width: 768px) {
+  .footerContainer {
+    width: 500px;
+  }
+
+  .sticks {
+    width: 90px;
+  }
 }

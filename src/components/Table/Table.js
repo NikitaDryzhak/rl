@@ -11,7 +11,6 @@ export default function Table({
   goalsMissed,
   goalsPerGame,
 }) {
-  console.log(players[0].name);
   return (
     <>
       <tr key={id}>
