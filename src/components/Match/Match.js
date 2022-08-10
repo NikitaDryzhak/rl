@@ -22,14 +22,20 @@ function Match() {
     if (users.nameOne === users.nameTwo) {
       alert('Ти помилився з іменами, братішка');
     }
-    const a = players.map(player => {
+    players.map(player => {
       if (player.name === users.nameOne) {
         player.games += 1;
         player.goalsScored += Number(users.goalsOne);
         player.goalsMissed += Number(users.goalsTwo);
         if (users.goalsOne > users.goalsTwo) {
           player.wins += 1;
-        } else player.loses += 1;
+          player.lastGames.push(1);
+          player.lastGames.shift();
+        } else {
+          player.loses += 1;
+          player.lastGames.push(0);
+          player.lastGames.shift();
+        }
       }
       if (player.name === users.nameTwo) {
         player.games += 1;
@@ -37,11 +43,16 @@ function Match() {
         player.goalsMissed += Number(users.goalsOne);
         if (users.goalsTwo > users.goalsOne) {
           player.wins += 1;
-        } else player.loses += 1;
+          player.lastGames.push(1);
+          player.lastGames.shift();
+        } else {
+          player.loses += 1;
+          player.lastGames.push(0);
+          player.lastGames.shift();
+        }
       }
       return player;
     });
-    console.log(a);
 
     setUsers({ nameOne: '', goalsOne: '', nameTwo: '', goalsTwo: '' });
   };
@@ -124,52 +135,68 @@ function Match() {
           <img className={s.afterTextImg} alt="sticks" />
         </div>
       </div>
-      <table className={s.list}>
-        <tbody className={s.tableBody}>
-          <tr>
-            <th className={s.topTableItem}>Name</th>
-            <th className={s.topTableItem}>Games</th>
-            <th className={s.topTableItem}>Win</th>
-            <th className={s.topTableItem}>Lose</th>
-            <th className={s.topTableItem}>GF</th>
-            <th className={s.topTableItem}>GA</th>
-            <th className={s.topTableItem}>GPG</th>
-          </tr>
+      <div className={s.listContainer}>
+        <table className={s.list}>
+          <tbody className={s.tableBody}>
+            <tr>
+              <th className={s.topTableItem}>Name</th>
+              <th className={s.topTableItem}>Last five</th>
+              <th className={s.topTableItem}>Games</th>
+              <th className={s.topTableItem}>Win</th>
+              <th className={s.topTableItem}>Lose</th>
+              <th className={s.topTableItem}>GF</th>
+              <th className={s.topTableItem}>GA</th>
+              <th className={s.topTableItem}>GPG</th>
+            </tr>
+            {players.map(
+              ({
+                id,
+                name,
+                games,
+                wins,
+                loses,
+                goalsScored,
+                goalsMissed,
+                lastGames,
+              }) => {
+                const goalsPerGame = (goalsScored / games).toFixed(2);
+                return (
+                  <Table
+                    key={id}
+                    name={name}
+                    games={games}
+                    wins={wins}
+                    loses={loses}
+                    goalsScored={goalsScored}
+                    goalsMissed={goalsMissed}
+                    goalsPerGame={goalsPerGame}
+                    lastGames={lastGames}
+                  />
+                );
+              }
+            )}
+          </tbody>
+        </table>{' '}
+        <img className={s.warsaw} />
+      </div>
+      <div className={s.mobileTable}>
+        <ul className={s.mobileList}>
           {players.map(
-            ({ id, name, games, wins, loses, goalsScored, goalsMissed }) => {
+            ({ id, name, games, wins, loses, goalsScored, lastGames }) => {
               const goalsPerGame = (goalsScored / games).toFixed(2);
               return (
-                <Table
+                <MobileTable
                   key={id}
                   name={name}
                   games={games}
                   wins={wins}
                   loses={loses}
-                  goalsScored={goalsScored}
-                  goalsMissed={goalsMissed}
                   goalsPerGame={goalsPerGame}
+                  lastGames={lastGames}
                 />
               );
             }
           )}
-        </tbody>
-        <p className={s.warsaw}></p>
-      </table>
-      <div className={s.mobileTable}>
-        <ul className={s.mobileList}>
-          {players.map(({ id, name, games, wins, loses, goalsScored }) => {
-            const goalsPerGame = (goalsScored / games).toFixed(2);
-            return (
-              <MobileTable
-                key={id}
-                name={name}
-                games={games}
-                wins={wins}
-                loses={loses}
-                goalsPerGame={goalsPerGame}
-              />
-            );
-          })}
           <p className={s.warsawMobile}></p>
         </ul>
       </div>{' '}

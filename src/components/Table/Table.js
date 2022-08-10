@@ -11,6 +11,7 @@ export default function Table({
   goalsScored,
   goalsMissed,
   goalsPerGame,
+  lastGames,
 }) {
   return (
     <>
@@ -21,6 +22,25 @@ export default function Table({
           }
         >
           {name}
+        </td>
+        <td>
+          <ul className={s.lastGamesList}>
+            <li className={lastGames[0] === 1 ? s.win : s.lose}>
+              {lastGames[0]}
+            </li>
+            <li className={lastGames[1] === 1 ? s.win : s.lose}>
+              {lastGames[1]}
+            </li>
+            <li className={lastGames[2] === 1 ? s.win : s.lose}>
+              {lastGames[2]}
+            </li>
+            <li className={lastGames[3] === 1 ? s.win : s.lose}>
+              {lastGames[3]}
+            </li>
+            <li className={lastGames[4] === 1 ? s.win : s.lose}>
+              {lastGames[4]}
+            </li>
+          </ul>
         </td>
         <td className={name !== players[0].name ? s.tableItem : s.firstItem}>
           {games}
@@ -46,12 +66,11 @@ export default function Table({
 }
 
 Table.propTypes = {
-  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   games: PropTypes.number.isRequired,
   wins: PropTypes.number.isRequired,
   loses: PropTypes.number.isRequired,
   goalsScored: PropTypes.number.isRequired,
   goalsMissed: PropTypes.number.isRequired,
-  goalsPerGame: PropTypes.number.isRequired,
+  goalsPerGame: PropTypes.string.isRequired,
 };
