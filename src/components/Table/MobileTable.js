@@ -21,19 +21,19 @@ export default function MobileTable({
       </p>
       <ul className={s.playerInfoList}>
         <li className={s.listPlayerInfoItem}>
-          <span>GAMES</span>
+          <span className={s.listSpan}>GAMES</span>
           <span>{games}</span>
         </li>
         <li className={s.listPlayerInfoItem}>
-          <span>WINS</span>
+          <span className={s.listSpan}>WINS</span>
           <span>{wins}</span>
         </li>
         <li className={s.listPlayerInfoItem}>
-          <span>LOSES</span>
+          <span className={s.listSpan}>LOSES</span>
           <span>{loses}</span>
         </li>
         <li className={s.listPlayerInfoItem}>
-          <span>GPG</span>
+          <span className={s.listSpan}>GPG</span>
           <span>{games === 0 ? 0 : goalsPerGame}</span>
         </li>
       </ul>

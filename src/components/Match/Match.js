@@ -21,6 +21,7 @@ function Match() {
 
     if (users.nameOne === users.nameTwo) {
       alert('Ти помилився з іменами, братішка');
+      return;
     }
     players.map(player => {
       if (player.name === users.nameOne) {
@@ -60,22 +61,24 @@ function Match() {
   return (
     <div>
       <div className={s.mainPage}>
-        <h1 className={s.welcomeText}>WELCOME TO THE RETARDS LEAGUE</h1>
-        <h2 className={s.infoText}>PLEASE INSERT LAST GAME SCORE</h2>
+        <h1 className={s.welcomeText}>OFFICIAL SCORE PAGE OF THE GAME</h1>
+        <h2 className={s.infoText}>PLEASE INSERT LAST SCORE</h2>
 
         <form className={s.form} autoComplete="off" onSubmit={btnSubmit}>
           <label className={s.label}>
             {' '}
             <div className={s.result}>
               {' '}
+              <p className={s.optionText}>PLAYER 1</p>
               <select
                 className={s.inputSelect}
                 onChange={handleChangeOne}
                 name="nameOne"
                 value={users.nameOne}
               >
+                {' '}
                 <option value="" disabled>
-                  ADD PLAYER 1
+                  NAME
                 </option>
                 <option value="BODYAO">BODYAO</option>
                 <option value="IVANYAO">IVANYAO</option>
@@ -97,6 +100,7 @@ function Match() {
             </div>
             <div className={s.result}>
               {' '}
+              <p className={s.optionText}>PLAYER 2</p>
               <select
                 className={s.inputSelect}
                 onChange={handleChangeOne}
@@ -105,7 +109,7 @@ function Match() {
               >
                 {' '}
                 <option value="" disabled>
-                  ADD PLAYER 2
+                  NAME
                 </option>
                 <option value="MIKHYAO">MIKHYAO</option>
                 <option value="IVANYAO">IVANYAO</option>
