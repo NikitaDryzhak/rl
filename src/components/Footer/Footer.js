@@ -8,7 +8,7 @@ export default function Footer() {
         <p className={s.mainTextFooter}>
           Retards League is official webpage with scoreboard made by
           <br />
-          Dryzhak and Mykhailo Budko as a project for portfolio.
+          Nikita Dryzhak and Mykhailo Budko as a project for portfolio.
           <br />
           All legal rights held by creators 2022.
         </p>
