@@ -47,7 +47,7 @@ td {
   width: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0;
   margin-left: auto;
   margin-right: auto;
@@ -56,9 +56,13 @@ td {
 .win {
   content: url('../../../images/win.svg');
   width: 10px;
+  margin-left: 1px;
+  margin-right: 1px;
 }
 
 .lose {
   content: url('../../../images/lose.svg');
   width: 10px;
+  margin-left: 1px;
+  margin-right: 1px;
 }
