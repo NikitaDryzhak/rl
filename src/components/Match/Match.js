@@ -86,14 +86,15 @@ function Match() {
                 <option value="MIKHYAO">MIKHYAO</option>
                 <option value="TARASYAO">TARASYAO</option>
                 <option value="NIKITYAO">NIKITYAO</option>
-              </select>
+              </select>{' '}
+              <p className={s.optionText}>ADD GOALS NUMBER</p>{' '}
               <input
                 onChange={handleChangeOne}
                 className={s.input}
                 type="number"
                 name="goalsOne"
                 required
-                placeholder="ADD GOALS NUMBER"
+                placeholder="0"
                 min="0"
                 value={users.goalsOne}
               />
@@ -107,7 +108,6 @@ function Match() {
                 name="nameTwo"
                 value={users.nameTwo}
               >
-                {' '}
                 <option value="" disabled>
                   NAME
                 </option>
@@ -117,14 +117,15 @@ function Match() {
                 <option value="EUGENYAO">EUGENYAO</option>
                 <option value="TARASYAO">TARASYAO</option>
                 <option value="NIKITYAO">NIKITYAO</option>
-              </select>
+              </select>{' '}
+              <p className={s.optionText}>ADD GOALS NUMBER</p>{' '}
               <input
                 onChange={handleChangeOne}
                 className={s.input}
                 type="number"
                 name="goalsTwo"
                 required
-                placeholder="ADD GOALS NUMBER"
+                placeholder="0"
                 min="0"
                 value={users.goalsTwo}
               />

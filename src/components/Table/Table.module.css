@@ -4,6 +4,8 @@
   font-size: 12px;
   background-color: #fff;
   z-index: 1;
+  border-left: none;
+  border-top: none;
 }
 
 .tableItemName {
@@ -12,6 +14,8 @@
   font-size: 12px;
   text-align: left;
   padding-left: 5px;
+  border-right: none;
+  border-top: none;
 }
 
 th,
@@ -22,6 +26,8 @@ td {
 .firstItem {
   color: #094669;
   font-size: 12px;
+  border-top: none;
+  border-left: none;
 }
 
 .firstItemName {
@@ -29,6 +35,8 @@ td {
   font-size: 12px;
   text-align: left;
   padding-left: 5px;
+  border-top: none;
+  border-right: none;
 }
 
 .firstItemName::after {
@@ -51,6 +59,10 @@ td {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.lastGamesListBorder {
+  border-top: none;
 }
 
 .win {

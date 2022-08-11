@@ -23,7 +23,7 @@ export default function Table({
         >
           {name}
         </td>
-        <td>
+        <td className={s.lastGamesListBorder}>
           <ul className={s.lastGamesList}>
             <li className={lastGames[0] === 1 ? s.win : s.lose}>
               {lastGames[0]}
