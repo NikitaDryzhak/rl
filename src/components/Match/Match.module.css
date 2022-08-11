@@ -242,7 +242,7 @@ td {
   }
 
   .overTableText {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .afterTextImg {
@@ -256,7 +256,7 @@ td {
     background: #ffffff;
     border: 2px solid #6dcbff;
     box-shadow: 0px 40px 150px rgba(7, 62, 92, 0.2);
-    width: 360px;
+    width: 320px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -275,9 +275,9 @@ td {
   }
   .warsawMobile {
     content: url('../../../images/warsaw-main.png');
-    width: 110px;
+    width: 90px;
     position: absolute;
-    right: -16%;
+    right: -15%;
     bottom: -4%;
     margin: 0;
     padding: 0;
@@ -323,5 +323,11 @@ td {
     margin: 0;
     padding: 0;
     z-index: -1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mobileList {
+    width: 290px;
   }
 }

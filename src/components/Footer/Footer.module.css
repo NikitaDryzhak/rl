@@ -56,3 +56,19 @@
     width: 90px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .footerContainer {
+    width: 320px;
+  }
+
+  .mainTextFooter {
+    padding: 10px;
+    font-size: 8px;
+  }
+
+  .sticks {
+    left: -15px;
+    top: 8px;
+  }
+}

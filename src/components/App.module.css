@@ -6,8 +6,8 @@
   height: 100%;
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   .mainContainer {
     width: 480px;
   }
-}
+} */
