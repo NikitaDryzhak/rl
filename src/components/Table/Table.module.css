@@ -6,6 +6,7 @@
   z-index: 1;
   border-left: none;
   border-top: none;
+  width: 70px;
 }
 
 .tableItemName {

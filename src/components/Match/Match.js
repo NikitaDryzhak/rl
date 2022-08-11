@@ -23,6 +23,7 @@ function Match() {
       alert('Ти помилився з іменами, братішка');
       return;
     }
+
     players.map(player => {
       if (player.name === users.nameOne) {
         player.games += 1;
@@ -54,15 +55,14 @@ function Match() {
       }
       return player;
     });
-
     setUsers({ nameOne: '', goalsOne: '', nameTwo: '', goalsTwo: '' });
   };
 
   return (
     <div>
       <div className={s.mainPage}>
-        <h1 className={s.welcomeText}>OFFICIAL SCORE PAGE OF THE GAME</h1>
-        <h2 className={s.infoText}>PLEASE INSERT LAST SCORE</h2>
+        <h1 className={s.welcomeText}>OFFICIAL GAME SCORE PAGE</h1>
+        <h2 className={s.infoText}>INSERT LAST MATCH INFO</h2>
 
         <form className={s.form} autoComplete="off" onSubmit={btnSubmit}>
           <label className={s.label}>
