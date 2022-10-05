@@ -163,7 +163,9 @@ function Match() {
                 goalsScored,
                 goalsMissed,
                 lastGames,
+                photo
               }) => {
+                
                 const goalsPerGame = (goalsScored / games).toFixed(2);
                 return (
                   <Table
@@ -176,6 +178,7 @@ function Match() {
                     goalsMissed={goalsMissed}
                     goalsPerGame={goalsPerGame}
                     lastGames={lastGames}
+                    photo={photo}
                   />
                 );
               }
@@ -187,7 +190,7 @@ function Match() {
       <div className={s.mobileTable}>
         <ul className={s.mobileList}>
           {players.map(
-            ({ id, name, games, wins, loses, goalsScored, lastGames }) => {
+            ({ id, name, games, wins, loses, goalsScored, lastGames, photo }) => {
               const goalsPerGame = (goalsScored / games).toFixed(2);
               return (
                 <MobileTable
@@ -198,6 +201,7 @@ function Match() {
                   loses={loses}
                   goalsPerGame={goalsPerGame}
                   lastGames={lastGames}
+                  photo={photo}
                 />
               );
             }

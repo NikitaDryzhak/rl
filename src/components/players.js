@@ -8,6 +8,7 @@ const players = [
     goalsScored: 132,
     goalsMissed: 144,
     lastGames: [1, 1, 1, 0, 0],
+    photo: 'https://i.ibb.co/c3PGPRZ/bodya.png',
   },
   {
     id: 2,
@@ -18,8 +19,8 @@ const players = [
     goalsScored: 107,
     goalsMissed: 98,
     lastGames: [0, 0, 1, 1, 1],
+    photo: 'https://i.ibb.co/yd9VTs7/taras.png',
   },
-
   {
     id: 3,
     name: 'MIKHYAO',
@@ -29,6 +30,7 @@ const players = [
     goalsScored: 51,
     goalsMissed: 40,
     lastGames: [1, 1, 0, 1, 0],
+    photo: 'https://i.ibb.co/y56GnY7/mike.png',
   },
   {
     id: 4,
@@ -39,6 +41,7 @@ const players = [
     goalsScored: 66,
     goalsMissed: 62,
     lastGames: [0, 0, 0, 0, 0],
+    photo: 'https://i.ibb.co/JvVFCM6/did.png',
   },
   {
     id: 5,
@@ -50,6 +53,7 @@ const players = [
     goalsMissed: 0,
 
     lastGames: [0, 0, 0, 0, 0],
+    photo: 'https://i.ibb.co/Z1Mrf60/nik.png',
   },
   {
     id: 6,
@@ -60,6 +64,7 @@ const players = [
     goalsScored: 0,
     goalsMissed: 0,
     lastGames: [0, 0, 0, 0, 0],
+    photo: 'https://i.ibb.co/xMbjdx2/vania.png',
   },
 ];
 

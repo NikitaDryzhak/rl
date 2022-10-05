@@ -14,7 +14,6 @@
   font-weight: 400;
   font-size: 12px;
   text-align: left;
-  padding-left: 5px;
   border-right: none;
   border-top: none;
 }
@@ -22,6 +21,16 @@
 th,
 td {
   border: #6dcbff 1px solid;
+}
+
+.namePlayerTd {
+  border-top: none;
+  border-right: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
 }
 
 .firstItem {
@@ -35,7 +44,6 @@ td {
   color: #094669;
   font-size: 12px;
   text-align: left;
-  padding-left: 5px;
   border-top: none;
   border-right: none;
 }
@@ -53,7 +61,7 @@ td {
 
 .lastGamesList {
   margin: 0;
-  width: 50px;
+  width: 100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -68,7 +76,6 @@ td {
 
 .win {
   content: url('../../../images/win.svg');
-
   width: 10px;
   margin-left: 1px;
   margin-right: 1px;
@@ -79,4 +86,10 @@ td {
   width: 10px;
   margin-left: 1px;
   margin-right: 1px;
+}
+
+.photo {
+  border-radius: 50%;
+  width: 25px;
+  margin-left: 10px;
 }

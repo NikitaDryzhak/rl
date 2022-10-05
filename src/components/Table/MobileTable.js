@@ -10,12 +10,13 @@ export default function MobileTable({
   loses,
   goalsPerGame,
   lastGames,
+  photo
 }) {
   return (
     <li
       key={id}
       className={name !== players[0].name ? s.listPlayerItem : s.firstItemName}
-    >
+    > <img src={photo} alt="player" className={s.photo}/>
       <p className={name === players[0].name ? s.firstNameCrown : undefined}>
         {name}
       </p>

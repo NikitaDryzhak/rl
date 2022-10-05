@@ -12,16 +12,18 @@ export default function Table({
   goalsMissed,
   goalsPerGame,
   lastGames,
+  photo,
 }) {
   return (
     <>
       <tr key={id}>
         <td
-          className={
-            name !== players[0].name ? s.tableItemName : s.firstItemName
-          }
+          className={s.namePlayerTd}
         >
-          {name}
+          <span className={
+            name !== players[0].name ? s.tableItemName : s.firstItemName
+          }>{name}</span>
+          <img src={photo} alt="player" className={s.photo}/>
         </td>
         <td className={s.lastGamesListBorder}>
           <ul className={s.lastGamesList}>
