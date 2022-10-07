@@ -4,7 +4,7 @@ import Table from '../Table/Table';
 import MobileTable from '../Table/MobileTable';
 import { useState } from 'react';
 
-import {useGetPlayersQuery } from '../../redux/sliceAPI'
+// import {useGetPlayersQuery } from '../../redux/sliceAPI'
 
 
 function Match() {
@@ -15,7 +15,7 @@ function Match() {
     goalsTwo: '',
   });
 
-  const {data} = useGetPlayersQuery()
+  // const {data} = useGetPlayersQuery()
   
   // data.map(pl => console.log(pl))
   
