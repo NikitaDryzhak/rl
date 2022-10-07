@@ -3,6 +3,10 @@ import players from '../players';
 import Table from '../Table/Table';
 import MobileTable from '../Table/MobileTable';
 import { useState } from 'react';
+
+import {useGetPlayersQuery } from '../../redux/sliceAPI'
+
+
 function Match() {
   const [users, setUsers] = useState({
     nameOne: '',
@@ -10,6 +14,13 @@ function Match() {
     nameTwo: '',
     goalsTwo: '',
   });
+
+  const {data} = useGetPlayersQuery()
+  
+  // data.map(pl => console.log(pl))
+  
+  
+
   const handleChangeOne = e => {
     setUsers({ ...users, [e.currentTarget.name]: e.currentTarget.value });
   };
@@ -23,6 +34,8 @@ function Match() {
       alert('Ти помилився з іменами, братішка');
       return;
     }
+
+    
 
     players.map(player => {
       if (player.name === users.nameOne) {
