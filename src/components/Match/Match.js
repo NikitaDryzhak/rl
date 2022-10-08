@@ -16,6 +16,7 @@ function Match() {
   });
 
   // const {data} = useGetPlayersQuery()
+
   
   // data.map(pl => console.log(pl))
   
