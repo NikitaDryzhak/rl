@@ -1,23 +1,27 @@
 import s from './MobileTable.module.css';
-import players from '../players';
 import PropTypes from 'prop-types';
 
 export default function MobileTable({
-  id,
+  _id,
   name,
+  allPlayers,
   games,
   wins,
   loses,
   goalsPerGame,
   lastGames,
-  photo
+  photo,
 }) {
   return (
     <li
-      key={id}
-      className={name !== players[0].name ? s.listPlayerItem : s.firstItemName}
-    > <img src={photo} alt="player" className={s.photo}/>
-      <p className={name === players[0].name ? s.firstNameCrown : undefined}>
+      key={_id}
+      className={
+        name !== allPlayers[0].name ? s.listPlayerItem : s.firstItemName
+      }
+    >
+      {' '}
+      <img src={photo} alt="player" className={s.photo} />
+      <p className={name === allPlayers[0].name ? s.firstNameCrown : undefined}>
         {name}
       </p>
       <ul className={s.playerInfoList}>
@@ -38,13 +42,22 @@ export default function MobileTable({
           <span>{games === 0 ? 0 : goalsPerGame}</span>
         </li>
       </ul>
-
       <ul className={s.lastGamesList}>
-        <li className={lastGames[0] === 1 ? s.win : s.lose}>{lastGames[0]}</li>
-        <li className={lastGames[1] === 1 ? s.win : s.lose}>{lastGames[1]}</li>
-        <li className={lastGames[2] === 1 ? s.win : s.lose}>{lastGames[2]}</li>
-        <li className={lastGames[3] === 1 ? s.win : s.lose}>{lastGames[3]}</li>
-        <li className={lastGames[4] === 1 ? s.win : s.lose}>{lastGames[4]}</li>
+        <li className={Number(lastGames[0]) === 1 ? s.win : s.lose}>
+          {lastGames[0]}
+        </li>
+        <li className={Number(lastGames[1]) === 1 ? s.win : s.lose}>
+          {lastGames[1]}
+        </li>
+        <li className={Number(lastGames[2]) === 1 ? s.win : s.lose}>
+          {lastGames[2]}
+        </li>
+        <li className={Number(lastGames[3]) === 1 ? s.win : s.lose}>
+          {lastGames[3]}
+        </li>
+        <li className={Number(lastGames[4]) === 1 ? s.win : s.lose}>
+          {lastGames[4]}
+        </li>
       </ul>
     </li>
   );

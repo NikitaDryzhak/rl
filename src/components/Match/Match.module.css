@@ -64,6 +64,7 @@
 .btnSubmit {
   margin-bottom: 20px;
   background: linear-gradient(108.95deg, #0b71aa 6.73%, #094769 135.07%);
+  box-shadow: 2px 2px 4px rgba(9, 83, 124, 0.47);
   border-radius: 4px;
   width: 250px;
   height: 50px;
@@ -74,6 +75,12 @@
   text-transform: uppercase;
   text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+
+.btnSubmit:hover {
+  background:  linear-gradient(108.95deg, #FED648 6.73%, #EC7C31 135.07%);
+  color: #094669;
+  box-shadow: inset 2px 2px 4px #B8946E;
 }
 
 .mainTextContainer {

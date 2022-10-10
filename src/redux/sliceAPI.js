@@ -12,8 +12,8 @@ export const playersApi = createApi({
         providesTags: ['Player'],
       }),
       patchPlayer: builder.mutation({
-        query: ({id, name, games, wins, loses, goalsScored, goalsMissed, lastGames, photo}) => ({
-          url: `/${id}`,
+        query: ({_id, name, games, wins, loses, goalsScored, goalsMissed, lastGames, photo}) => ({
+          url: `/${_id}`,
           method: 'PATCH',
           body: {name, games, wins, loses, goalsScored, goalsMissed, lastGames, photo},
         }),
