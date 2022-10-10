@@ -4,7 +4,7 @@ import MobileTable from '../Table/MobileTable';
 import { useEffect, useState } from 'react';
 import getPlayers from '../../redux/service';
 
-import { usePatchPlayerMutation } from '../../redux/sliceAPI';
+// import { usePatchPlayerMutation } from '../../redux/sliceAPI';
 
 function Match() {
   // const [changePlayerStat] = usePatchPlayerMutation();
