@@ -7,7 +7,7 @@ import getPlayers from '../../redux/service';
 import { usePatchPlayerMutation } from '../../redux/sliceAPI';
 
 function Match() {
-  const [changePlayerStat] = usePatchPlayerMutation();
+  // const [changePlayerStat] = usePatchPlayerMutation();
 
   const [users, setUsers] = useState({
     nameOne: '',
