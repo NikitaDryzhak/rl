@@ -4,10 +4,10 @@ import MobileTable from '../Table/MobileTable';
 import { useEffect, useState } from 'react';
 import getPlayers from '../../redux/service';
 
-// import { usePatchPlayerMutation } from '../../redux/sliceAPI';
+import { usePatchPlayerMutation } from '../../redux/sliceAPI';
 
 function Match() {
-  // const [changePlayerStat] = usePatchPlayerMutation();
+  const [changePlayerStat] = usePatchPlayerMutation();
 
   const [users, setUsers] = useState({
     nameOne: '',
@@ -17,9 +17,11 @@ function Match() {
   });
 
   const [allPlayers, setAllPlayers] = useState([]);
-  allPlayers.sort((a, b) =>  b.goalsScored/`${b.games !== 0 ? b.games : 1}` - a.goalsScored /`${a.games !== 0 ? a.games : 1}`);
-
-
+  allPlayers.sort(
+    (a, b) =>
+      b.goalsScored / `${b.games !== 0 ? b.games : 1}` -
+      a.goalsScored / `${a.games !== 0 ? a.games : 1}`
+  );
 
   const [changesFirstPlayer, setChangesFirstPlayer] = useState({
     _id: '',
@@ -30,7 +32,6 @@ function Match() {
     goalsMissed: 0,
     lastGames: [],
   });
-
 
   const [changesSecondPlayer, setChangesSecondPlayer] = useState({
     _id: '',
@@ -50,31 +51,50 @@ function Match() {
       .catch(error => {
         console.log(error);
       });
-  }, []);
-
-
-  
-
-
+    if (changesFirstPlayer._id !== '') {
+      getPlayers()
+        .then(({ data }) => {
+          setAllPlayers([...data]);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      changePlayerStat({ id: changesFirstPlayer._id, ...changesFirstPlayer });
+      changePlayerStat({ id: changesSecondPlayer._id, ...changesSecondPlayer });
+      setChangesFirstPlayer({
+        _id: '',
+        games: 0,
+        wins: 0,
+        loses: 0,
+        goalsScored: 0,
+        goalsMissed: 0,
+        lastGames: [],
+      });
+      setChangesSecondPlayer({
+        _id: '',
+        games: 0,
+        wins: 0,
+        loses: 0,
+        goalsScored: 0,
+        goalsMissed: 0,
+        lastGames: [],
+      });
+    }
+  }, [changesFirstPlayer, changesSecondPlayer]);
 
   const handleChangeOne = e => {
     setUsers({ ...users, [e.currentTarget.name]: e.currentTarget.value });
   };
 
-
   const btnSubmit = event => {
     event.preventDefault();
 
     allPlayers.map(player => {
-      if (
-        player.name === users.nameOne &&
-        users.goalsOne > users.goalsTwo
-      ) {
+      if (player.name === users.nameOne && users.goalsOne > users.goalsTwo) {
         const newCountGames = player.games + 1;
         const newCountGoalsScoared =
           player.goalsScored + Number(users.goalsOne);
-        const newCountGoalsMissed =
-          player.goalsMissed + Number(users.goalsTwo);
+        const newCountGoalsMissed = player.goalsMissed + Number(users.goalsTwo);
         const newCountWins = player.wins + 1;
         const newCountWinsArray = [
           player.lastGames[1],
@@ -100,8 +120,7 @@ function Match() {
         const newCountGames = player.games + 1;
         const newCountGoalsScoared =
           player.goalsScored + Number(users.goalsOne);
-        const newCountGoalsMissed =
-          player.goalsMissed + Number(users.goalsTwo);
+        const newCountGoalsMissed = player.goalsMissed + Number(users.goalsTwo);
         const newCountLoses = player.loses + 1;
         const newCountWinsArray = [
           player.lastGames[1],
@@ -120,15 +139,11 @@ function Match() {
           lastGames: newCountWinsArray,
         });
       }
-      if (
-        player.name === users.nameTwo &&
-        users.goalsOne < users.goalsTwo
-      ) {
+      if (player.name === users.nameTwo && users.goalsOne < users.goalsTwo) {
         const newCountGames = player.games + 1;
         const newCountGoalsScoared =
           player.goalsScored + Number(users.goalsTwo);
-        const newCountGoalsMissed =
-          player.goalsMissed + Number(users.goalsOne);
+        const newCountGoalsMissed = player.goalsMissed + Number(users.goalsOne);
         const newCountWins = player.wins + 1;
         const newCountWinsArray = [
           player.lastGames[1],
@@ -153,8 +168,7 @@ function Match() {
         const newCountGames = player.games + 1;
         const newCountGoalsScoared =
           player.goalsScored + Number(users.goalsTwo);
-        const newCountGoalsMissed =
-          player.goalsMissed + Number(users.goalsOne);
+        const newCountGoalsMissed = player.goalsMissed + Number(users.goalsOne);
         const newCountLoses = player.loses + 1;
         const newCountWinsArray = [
           player.lastGames[1],
@@ -173,9 +187,6 @@ function Match() {
           lastGames: newCountWinsArray,
         });
       }
-      // changePlayerStat({_id: changesFirstPlayer._id, ...changesFirstPlayer})
-      // changePlayerStat({_id: changesSecondPlayer._id, ...changesSecondPlayer})
-
 
       setUsers({
         nameOne: '',
@@ -183,9 +194,6 @@ function Match() {
         nameTwo: '',
         goalsTwo: '',
       });
-
-
-
 
       return [changesFirstPlayer, changesSecondPlayer];
     });
@@ -302,7 +310,9 @@ function Match() {
                 lastGames,
                 photo,
               }) => {
-                const goalsPerGame = (Number(goalsScored) / Number(`${games !== 0 ? games : 1}`)).toFixed(2);
+                const goalsPerGame = (
+                  Number(goalsScored) / Number(`${games !== 0 ? games : 1}`)
+                ).toFixed(2);
 
                 return (
                   <Table
