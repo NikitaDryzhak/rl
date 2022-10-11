@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rocket-retards/static/css/main.6b147bc6.css",
-    "main.js": "/rocket-retards/static/js/main.605ac316.js",
+    "main.js": "/rocket-retards/static/js/main.1000ea05.js",
     "static/media/background-pc.png": "/rocket-retards/static/media/background-pc.a8e84c62651792d6d3ba.png",
     "static/media/warsaw-header.svg": "/rocket-retards/static/media/warsaw-header.66994bd0646fc7a292a5.svg",
     "static/media/background-phone.png": "/rocket-retards/static/media/background-phone.5fa4f6a3120f2d5b0015.png",
@@ -13,10 +13,10 @@
     "static/media/lose.svg": "/rocket-retards/static/media/lose.0e6bedafec1d2da47382.svg",
     "static/media/win.svg": "/rocket-retards/static/media/win.89a3d59103cb2cc8bb14.svg",
     "main.6b147bc6.css.map": "/rocket-retards/static/css/main.6b147bc6.css.map",
-    "main.605ac316.js.map": "/rocket-retards/static/js/main.605ac316.js.map"
+    "main.1000ea05.js.map": "/rocket-retards/static/js/main.1000ea05.js.map"
   },
   "entrypoints": [
     "static/css/main.6b147bc6.css",
-    "static/js/main.605ac316.js"
+    "static/js/main.1000ea05.js"
   ]
 }
