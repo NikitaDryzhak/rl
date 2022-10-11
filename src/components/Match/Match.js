@@ -171,9 +171,7 @@ function Match() {
         });
       }
 
-      if (users.goalsOne === users.goalsTwo) {
-        alert('There is no draw here, body')
-      }
+      
 
       setUsers({
         nameOne: '',
@@ -261,7 +259,7 @@ function Match() {
           </label>
           <button
             className={s.btnSubmit}
-            disabled={users.nameOne === users.nameTwo}
+            disabled={users.nameOne === users.nameTwo || users.goalsOne === users.goalsTwo}
             type="submit"
           >
             CONFIRM GAME
