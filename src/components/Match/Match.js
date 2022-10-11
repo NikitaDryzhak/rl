@@ -80,7 +80,7 @@ function Match() {
         lastGames: [],
       });
     }
-  }, [changesFirstPlayer, changesSecondPlayer]);
+  }, [changePlayerStat, changesFirstPlayer, changesSecondPlayer]);
 
   const handleChangeOne = e => {
     setUsers({ ...users, [e.currentTarget.name]: e.currentTarget.value });
