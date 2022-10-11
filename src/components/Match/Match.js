@@ -342,6 +342,7 @@ function Match() {
                   games={games}
                   wins={wins}
                   loses={loses}
+                  goalsScored={goalsScored}
                   goalsPerGame={goalsPerGame}
                   lastGames={lastGames}
                   photo={photo}

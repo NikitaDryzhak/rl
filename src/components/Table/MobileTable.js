@@ -7,7 +7,7 @@ export default function MobileTable({
   allPlayers,
   games,
   wins,
-  loses,
+  goalsScored,
   goalsPerGame,
   lastGames,
   photo,
@@ -34,8 +34,8 @@ export default function MobileTable({
           <span>{wins}</span>
         </li>
         <li className={s.listPlayerInfoItem}>
-          <span className={s.listSpan}>LOSES</span>
-          <span>{loses}</span>
+          <span className={s.listSpan}>GOALS</span>
+          <span>{goalsScored}</span>
         </li>
         <li className={s.listPlayerInfoItem}>
           <span className={s.listSpan}>GPG</span>
@@ -67,6 +67,6 @@ MobileTable.propTypes = {
   name: PropTypes.string.isRequired,
   games: PropTypes.number.isRequired,
   wins: PropTypes.number.isRequired,
-  loses: PropTypes.number.isRequired,
+  goalsScored: PropTypes.number.isRequired,
   goalsPerGame: PropTypes.string.isRequired,
 };
