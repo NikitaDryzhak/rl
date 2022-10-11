@@ -61,24 +61,7 @@ function Match() {
         });
       changePlayerStat({ id: changesFirstPlayer._id, ...changesFirstPlayer });
       changePlayerStat({ id: changesSecondPlayer._id, ...changesSecondPlayer });
-      setChangesFirstPlayer({
-        _id: '',
-        games: 0,
-        wins: 0,
-        loses: 0,
-        goalsScored: 0,
-        goalsMissed: 0,
-        lastGames: [],
-      });
-      setChangesSecondPlayer({
-        _id: '',
-        games: 0,
-        wins: 0,
-        loses: 0,
-        goalsScored: 0,
-        goalsMissed: 0,
-        lastGames: [],
-      });
+     
     }
   }, [changePlayerStat, changesFirstPlayer, changesSecondPlayer]);
 
@@ -186,6 +169,10 @@ function Match() {
           loses: newCountLoses,
           lastGames: newCountWinsArray,
         });
+      }
+
+      if (users.goalsOne === users.goalsTwo) {
+        alert('There is no draw here, body')
       }
 
       setUsers({
