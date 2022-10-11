@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/rl/static/css/main.d194ad09.css",
-    "main.js": "/rl/static/js/main.3128bc27.js",
-    "static/media/background-pc.png": "/rl/static/media/background-pc.a8e84c62651792d6d3ba.png",
-    "static/media/warsaw-header.svg": "/rl/static/media/warsaw-header.66994bd0646fc7a292a5.svg",
-    "static/media/background-phone.png": "/rl/static/media/background-phone.5fa4f6a3120f2d5b0015.png",
-    "static/media/warsaw-main.png": "/rl/static/media/warsaw-main.3abeb9b16b0022a5f7fb.png",
-    "static/media/sticks-header.png": "/rl/static/media/sticks-header.610681e3fb3d62e4fdeb.png",
-    "static/media/sticks-bottom.png": "/rl/static/media/sticks-bottom.18767e8cf6920c42c07c.png",
-    "static/media/Vector.svg": "/rl/static/media/Vector.fb439151e07f0126a16a.svg",
-    "index.html": "/rl/index.html",
-    "static/media/lose.svg": "/rl/static/media/lose.0e6bedafec1d2da47382.svg",
-    "static/media/win.svg": "/rl/static/media/win.89a3d59103cb2cc8bb14.svg",
-    "main.d194ad09.css.map": "/rl/static/css/main.d194ad09.css.map",
-    "main.3128bc27.js.map": "/rl/static/js/main.3128bc27.js.map"
+    "main.css": "/rocket-retards/static/css/main.6b147bc6.css",
+    "main.js": "/rocket-retards/static/js/main.3128bc27.js",
+    "static/media/background-pc.png": "/rocket-retards/static/media/background-pc.a8e84c62651792d6d3ba.png",
+    "static/media/warsaw-header.svg": "/rocket-retards/static/media/warsaw-header.66994bd0646fc7a292a5.svg",
+    "static/media/background-phone.png": "/rocket-retards/static/media/background-phone.5fa4f6a3120f2d5b0015.png",
+    "static/media/warsaw-main.png": "/rocket-retards/static/media/warsaw-main.3abeb9b16b0022a5f7fb.png",
+    "static/media/sticks-header.png": "/rocket-retards/static/media/sticks-header.610681e3fb3d62e4fdeb.png",
+    "static/media/sticks-bottom.png": "/rocket-retards/static/media/sticks-bottom.18767e8cf6920c42c07c.png",
+    "index.html": "/rocket-retards/index.html",
+    "static/media/Vector.svg": "/rocket-retards/static/media/Vector.fb439151e07f0126a16a.svg",
+    "static/media/lose.svg": "/rocket-retards/static/media/lose.0e6bedafec1d2da47382.svg",
+    "static/media/win.svg": "/rocket-retards/static/media/win.89a3d59103cb2cc8bb14.svg",
+    "main.6b147bc6.css.map": "/rocket-retards/static/css/main.6b147bc6.css.map",
+    "main.3128bc27.js.map": "/rocket-retards/static/js/main.3128bc27.js.map"
   },
   "entrypoints": [
-    "static/css/main.d194ad09.css",
+    "static/css/main.6b147bc6.css",
     "static/js/main.3128bc27.js"
   ]
 }
