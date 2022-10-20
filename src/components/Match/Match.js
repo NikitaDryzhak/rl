@@ -33,6 +33,7 @@ function Match() {
     lastGames: [],
   });
 
+
   const [changesSecondPlayer, setChangesSecondPlayer] = useState({
     _id: '',
     games: 0,
@@ -42,6 +43,8 @@ function Match() {
     goalsMissed: 0,
     lastGames: [],
   });
+
+  
 
   useEffect(() => {
     getPlayers()
@@ -88,12 +91,11 @@ function Match() {
         ];
 
         setChangesFirstPlayer({
-          ...changesFirstPlayer,
           _id: player._id,
           games: newCountGames,
+          wins: newCountWins,
           goalsScored: newCountGoalsScoared,
           goalsMissed: newCountGoalsMissed,
-          wins: newCountWins,
           lastGames: newCountWinsArray,
         });
       } else if (
@@ -113,12 +115,11 @@ function Match() {
           String(0),
         ];
         setChangesFirstPlayer({
-          ...changesFirstPlayer,
           _id: player._id,
           games: newCountGames,
+          loses: newCountLoses,
           goalsScored: newCountGoalsScoared,
           goalsMissed: newCountGoalsMissed,
-          loses: newCountLoses,
           lastGames: newCountWinsArray,
         });
       }
@@ -136,12 +137,11 @@ function Match() {
           String(1),
         ];
         setChangesSecondPlayer({
-          ...changesSecondPlayer,
           _id: player._id,
           games: newCountGames,
+          wins: newCountWins,
           goalsScored: newCountGoalsScoared,
           goalsMissed: newCountGoalsMissed,
-          wins: newCountWins,
           lastGames: newCountWinsArray,
         });
       } else if (
@@ -161,7 +161,6 @@ function Match() {
           String(0),
         ];
         setChangesSecondPlayer({
-          ...changesSecondPlayer,
           _id: player._id,
           games: newCountGames,
           goalsScored: newCountGoalsScoared,
